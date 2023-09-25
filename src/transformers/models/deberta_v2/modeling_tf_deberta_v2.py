@@ -360,6 +360,7 @@ class TFDebertaV2Encoder(tf.keras.layers.Layer):
                 name="rel_embeddings.weight",
                 shape=[self.pos_ebd_size, self.config.hidden_size],
                 initializer=get_initializer(self.config.initializer_range),
+                trainable=False,
             )
         return super().build(input_shape)
 
